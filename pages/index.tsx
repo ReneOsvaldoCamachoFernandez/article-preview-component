@@ -64,7 +64,8 @@ export default function Home() {
             </div>
             <div
               className={
-                "w-[169.583px] flex  " + `${clicked ? "block" : "hidden"}`
+                "w-[169.583px] flex  justify-between " +
+                `${clicked ? "block" : "hidden"}`
               }
             >
               <p className="text-white/30">S H A R E</p>
@@ -73,21 +74,21 @@ export default function Home() {
                 width={20}
                 height={20}
                 alt="ico Face "
-                className="ml-[18px]"
+                className=""
               ></Image>
               <Image
                 src={IcoTwitter}
                 width={20}
                 height={20}
                 alt="ico Twitter "
-                className="ml-[18px]"
+                className=""
               ></Image>
               <Image
                 src={IcoPinterest}
                 width={20}
                 height={20}
                 alt="ico Pinterest "
-                className="ml-[18px]"
+                className=""
               ></Image>
             </div>
             <div
