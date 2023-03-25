@@ -17,6 +17,6 @@
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-top: 100px solid #000;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 50%, 0 0, 100% 0);
   }
 }

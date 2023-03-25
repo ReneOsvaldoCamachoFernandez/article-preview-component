@@ -115,7 +115,7 @@ export default function Home() {
             </div>
             <div
               className={
-                "h-[64px] relative flex justify-between items-center mt-[10px] py-[12px] px-[30px]" +
+                "h-[64px] hidden relative xl:flex justify-between items-center mt-[10px] py-[12px] px-[30px]" +
                 `${
                   clicked
                     ? " transition ease-in-out bg-[#FFF] duration-300"
@@ -123,7 +123,7 @@ export default function Home() {
                 }`
               }
             >
-              <div className={"flex " + `${clicked ? "" : ""}`}>
+              <div className={" flex " + `${clicked ? "" : ""}`}>
                 <Image
                   src={MichelleAvatar}
                   alt="michhele avatar"
