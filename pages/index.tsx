@@ -21,90 +21,174 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="images/favicon-32x32.png" />
       </Head>
-      <main className=" h-full bg-[#ECF2F8] flex items-center px-[24px] font-Manrope">
-        <div className="text-[#48556A] rounded-xl bg-[#FFFFFF] w-full ">
+      <main className=" h-full bg-[#ECF2F8] flex items-center px-[24px] xl:px-[355px] font-Manrope">
+        <div className="text-[#48556A] xl:w-[730] xl:h-[280] xl:flex  rounded-xl bg-[#FFFFFF] w-full ">
           <Image
             src={Drawers}
             alt="back image"
-            className="rounded-t-xl w-full h-[200px]"
+            className="rounded-t-xl xl:rounded-r-none xl:rounded-l-xl w-full h-[200px] xl:h-[280px] xl:w-[285px]"
           ></Image>
-          <div className="px-[30px]">
-            <h1 className=" mt-[40px] text-xl tracking-wide font-bold">
-              Shift the overall look and feel by adding these wonderful touches
-              to furniture in your home
-            </h1>
-            <p className="#6D7F97 leading-[1.446rem] mt-[20px] tracking-[0.02rem]">
-              Ever been in a room and felt like something was missing? Perhaps
-              it felt slightly bare and uninviting. I’ve got some simple tips to
-              help you make any room feel complete.
-            </p>
-          </div>
-          <div
-            className={
-              "h-[64px] flex justify-between items-center mt-[28px] py-[12px] px-[30px] rounded-b-lg" +
-              `${
-                clicked
-                  ? " transition ease-in-out bg-[#48556A] duration-300"
-                  : " transition ease-in-out  duration-300"
-              }`
-            }
-          >
-            <div className={"flex " + `${clicked ? "hidden" : "block"}`}>
-              <Image
-                src={MichelleAvatar}
-                alt="michhele avatar"
-                className="rounded-full"
-                width={40}
-                height={40}
-              ></Image>
-              <div className="ml-[16px]">
-                <h2 className="font-bold">Michelle Appleton</h2>
-                <p className="text-[#6D7F97]">28 Jun 2020</p>
+          <div className="xl:flex xl:flex-col">
+            <div className="px-[30px]">
+              <h1 className=" mt-[40px] text-xl xl:text-2xl tracking-wide font-bold">
+                Shift the overall look and feel by adding these wonderful
+                touches to furniture in your home
+              </h1>
+              <p className="#6D7F97 leading-[1.446rem] mt-[20px] tracking-[0.02rem]">
+                Ever been in a room and felt like something was missing? Perhaps
+                it felt slightly bare and uninviting. I’ve got some simple tips
+                to help you make any room feel complete.
+              </p>
+            </div>
+            <div
+              className={
+                "xl:hidden h-[64px] flex justify-between items-center mt-[28px] py-[12px] px-[30px] rounded-b-lg" +
+                `${
+                  clicked
+                    ? " transition ease-in-out bg-[#48556A] duration-300"
+                    : " transition ease-in-out  duration-300"
+                }`
+              }
+            >
+              <div className={"flex " + `${clicked ? "hidden" : "block"}`}>
+                <Image
+                  src={MichelleAvatar}
+                  alt="michhele avatar"
+                  className="rounded-full"
+                  width={40}
+                  height={40}
+                ></Image>
+                <div className="ml-[16px]">
+                  <h2 className="font-bold">Michelle Appleton</h2>
+                  <p className="text-[#6D7F97]">28 Jun 2020</p>
+                </div>
+              </div>
+              <div
+                className={
+                  "w-[169.583px] flex  justify-between " +
+                  `${clicked ? "block" : "hidden"}`
+                }
+              >
+                <p className="text-white/30">S H A R E</p>
+                <Image
+                  src={IcoFace}
+                  width={20}
+                  height={20}
+                  alt="ico Face "
+                  className=""
+                ></Image>
+                <Image
+                  src={IcoTwitter}
+                  width={20}
+                  height={20}
+                  alt="ico Twitter "
+                  className=""
+                ></Image>
+                <Image
+                  src={IcoPinterest}
+                  width={20}
+                  height={20}
+                  alt="ico Pinterest "
+                  className=""
+                ></Image>
+              </div>
+              <div
+                className={
+                  "rounded-full  w-[30px] h-[30px] flex items-center justify-center hover:cursor-pointer " +
+                  `${clicked ? "bg-[#6D7F97]" : "bg-[#ECF2F8]"}`
+                }
+                onClick={cambiar}
+              >
+                <div className={"text-red" + `${clicked ? "" : ""}`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="13"
+                  >
+                    <path
+                      fill={`${clicked ? "#FFFFFF" : "#6E8098"}`}
+                      d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <div
               className={
-                "w-[169.583px] flex  justify-between " +
-                `${clicked ? "block" : "hidden"}`
+                "h-[64px] relative flex justify-between items-center mt-[10px] py-[12px] px-[30px]" +
+                `${
+                  clicked
+                    ? " transition ease-in-out bg-[#FFF] duration-300"
+                    : " transition ease-in-out  duration-300"
+                }`
               }
             >
-              <p className="text-white/30">S H A R E</p>
-              <Image
-                src={IcoFace}
-                width={20}
-                height={20}
-                alt="ico Face "
-                className=""
-              ></Image>
-              <Image
-                src={IcoTwitter}
-                width={20}
-                height={20}
-                alt="ico Twitter "
-                className=""
-              ></Image>
-              <Image
-                src={IcoPinterest}
-                width={20}
-                height={20}
-                alt="ico Pinterest "
-                className=""
-              ></Image>
-            </div>
-            <div
-              className={
-                "rounded-full  w-[30px] h-[30px] flex items-center justify-center hover:cursor-pointer " +
-                `${clicked ? "bg-[#6D7F97]" : "bg-[#ECF2F8]"}`
-              }
-              onClick={cambiar}
-            >
-              <div className={"text-red" + `${clicked ? "" : ""}`}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
-                  <path
-                    fill={`${clicked ? "#FFFFFF" : "#6E8098"}`}
-                    d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
-                  />
-                </svg>
+              <div className={"flex " + `${clicked ? "" : ""}`}>
+                <Image
+                  src={MichelleAvatar}
+                  alt="michhele avatar"
+                  className="rounded-full"
+                  width={40}
+                  height={40}
+                ></Image>
+                <div className="ml-[16px]">
+                  <h2 className="font-bold">Michelle Appleton</h2>
+                  <p className="text-[#6D7F97]">28 Jun 2020</p>
+                </div>
+              </div>
+              <div
+                className={
+                  "flex justify-between " +
+                  `${
+                    clicked
+                      ? "absolute bg-[#48556A] py-[12px] px-[30px] w-[248px] rounded-xl bottom-[78px] right-[-75px]"
+                      : "hidden"
+                  }`
+                }
+              >
+                <p className="text-white/30">S H A R E</p>
+                <Image
+                  src={IcoFace}
+                  width={20}
+                  height={20}
+                  alt="ico Face "
+                  className=""
+                ></Image>
+                <Image
+                  src={IcoTwitter}
+                  width={20}
+                  height={20}
+                  alt="ico Twitter "
+                  className=""
+                ></Image>
+                <Image
+                  src={IcoPinterest}
+                  width={20}
+                  height={20}
+                  alt="ico Pinterest "
+                  className=""
+                ></Image>
+                <div className="w-[20px] h-[20px] bg-[#48556A] absolute bottom-[-20px] left-[118px] InvertedTriangle "></div>
+              </div>
+              <div
+                className={
+                  "rounded-full  w-[30px] h-[30px] flex items-center justify-center hover:cursor-pointer " +
+                  `${clicked ? "bg-[#6D7F97]" : "bg-[#ECF2F8]"}`
+                }
+                onClick={cambiar}
+              >
+                <div className={"text-red" + `${clicked ? "" : ""}`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="13"
+                  >
+                    <path
+                      fill={`${clicked ? "#FFFFFF" : "#6E8098"}`}
+                      d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
